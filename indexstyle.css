@@ -1,12 +1,22 @@
-.heading{
-
-}
-body{
+html{
+  background: radial-gradient(ellipse at bottom, #142f69, #111);
   height: 100vh;
+  background-attachment: fixed;
+}
+
+.heading, .teaminfo{
+  color: white;
+}
+
+a:link{
+  color: yellow;
+}
+
+
+bg{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(ellipse at bottom, #142f69, #111);
   overflow: hidden;
 }
 
