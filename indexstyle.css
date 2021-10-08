@@ -4,14 +4,23 @@ html{
   background-attachment: fixed;
 }
 
+.tab-buttom {
+  justify-content: center;
+}
+
 h1{
     width:500px;
     margin: 0 auto;
     text-align: center;
 }
 
-h1, .teaminfo{
+h1, .teaminfo {
   color: white;
+}
+
+.tab-head {
+  color: white;
+  justify-content: center;
 }
 
 a:link{
@@ -43,6 +52,13 @@ bg{
   overflow: hidden;
 }
 
+.bar{
+  width:100%;
+  overflow:hidden;
+  position:static;
+  float:left;
+}
+
 # Everything below this is the meteor function
 .nightsky{
   position: absolute;/* position: relative; */
@@ -60,6 +76,7 @@ bg{
   border-radius: 999px;
   animation: tail 3s ease-in-out infinite,
              falling 3s ease-in-out infinite;
+  z-index: -1;
 }
 
 @keyframes tail{
