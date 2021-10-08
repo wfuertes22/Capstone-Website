@@ -25,6 +25,13 @@ ul.nav {
   overflow: hidden;
 }
 
+ul {
+  color: white;
+}
+
+p {
+  color: white;
+}
 
 nav.li {
   float: left;
