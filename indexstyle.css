@@ -18,6 +18,10 @@ a:link{
   color: yellow;
 }
 
+a:visited{
+  color: green;
+}
+
 ul.nav {
   list-style-type: none;
   margin: 0;
