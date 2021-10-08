@@ -4,7 +4,13 @@ html{
   background-attachment: fixed;
 }
 
-.heading, .teaminfo{
+h1{
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, .teaminfo{
   color: white;
 }
 
@@ -12,6 +18,23 @@ a:link{
   color: yellow;
 }
 
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+nav.li {
+  float: left;
+}
+
+nav.li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
 
 bg{
   display: flex;
@@ -20,6 +43,7 @@ bg{
   overflow: hidden;
 }
 
+# Everything below this is the meteor function
 .nightsky{
   position: absolute;/* position: relative; */
   width: 100%;
