@@ -4,14 +4,21 @@ html{
   background-attachment: fixed;
 }
 
+* {
+  	font-family: Cambria;
+    font-weight: bold;
+}
+
 .tab-buttom {
   justify-content: center;
 }
 
 h1{
-    width:500px;
+    width: 1000px;
     margin: 0 auto;
+    margin-top: 60px;
     text-align: center;
+    font-size: 90px;
 }
 
 h1, .teaminfo {

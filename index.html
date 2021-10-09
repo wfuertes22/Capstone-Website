@@ -7,13 +7,10 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>Team First Light</h1>
+    <h1><a href="index.html">Team First Light</a></h1>
 
     <img src="./Images/Team_Logo.jpg" width="80" height="80">
 
-    <ul class="nav">
-        <li><a href="./About.html">Team</a></li>
-    </ul>
     <div class="bar">
         <button class="bar-item tab-button" onclick="openTab('Team')">Team</button>
         <button class="bar-item tab-button" onclick="openTab('Description')">Description</button>
@@ -24,7 +21,21 @@
         <button class="bar-item tab-button" onclick="openTab('Codebase')">Codebase</button>
         <button class="bar-item tab-button" onclick="openTab('Demo')">Demo</button>
       </div>
-      
+
+
+      <div id="Team" class="tab-head">
+        <span onclick="this.parentElement.style.display='none'"
+        class="tab-button ">&times;</span>
+        <h2>The Team</h2>
+        <ul class="Team_Info">
+            <li>Carson Pociask: <a href="mailto: cmp557@nau.edu">cmp557@nau.edu</a></li>
+            <li>Jakob Nelson: <a href="mailto: jrn235@nau.edu">jrn235@nau.edu</a></li>
+            <li>Jensen Roe: <a href="mailto: jr2999@nau.edu">jr2999@nau.edu</a></li>
+            <li>Matt List (Team Lead): <a href="mailto: mjl79@nau.edu">mjl79@nau.edu</a></li>
+            <li>William Fuertes: <a href="mailto: wf69@nau.edu">wf69@nau.edu</a></li>
+        </ul>
+      </div>
+
       <div id="Description" class="tab-head">
         <span onclick="this.parentElement.style.display='none'"
         class="tab-button ">&times;</span>
@@ -32,7 +43,7 @@
         <p>Our client recieves terabytes of astronomical data each day. Visualizing this data is currently very poor, or even broken. We are building a visualization tool
             that will make visualizing this data easy and attractive, while being performant and hosted at NAU.</p>
       </div>
-      
+
       <div id="Requirements" class="tab-head" style="display:none">
         <span onclick="this.parentElement.style.display='none'"
         class="tab-button">&times;</span>
@@ -102,9 +113,9 @@
           var i;
           var x = document.getElementsByClassName("tab-head");
           for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
+            x[i].style.display = "none";
           }
-          document.getElementById(tabName).style.display = "block";  
+          document.getElementById(tabName).style.display = "block";
         }
     </script>
 
