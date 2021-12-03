@@ -1,76 +1,142 @@
-html{
-  background: radial-gradient(ellipse at bottom, #142f69, #111);
-  height: 100vh;
-  background-attachment: fixed;
+* {box-sizing: border-box}
+
+a:link {
+  background-color: transparent;
+  text-decoration: none;
 }
 
-.tab-buttom {
-  justify-content: center;
-}
-
-h1{
-    width:500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1, .teaminfo {
+a:hover {
+  text-shadow: 0px 0px 25px #ffffff, 0px 5px 10px #ffffff;
   color: white;
+  background-color: transparent;
 }
 
-.tab-head {
+a:visited {
   color: white;
-  justify-content: center;
+  text-decoration: none;
 }
 
-a:link{
-  color: yellow;
-}
-
-a:visited{
-  color: green;
-}
-
-ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-ul {
+body {
+  text-align: center;
   color: white;
+  background-color: black;
 }
 
 p {
-  color: white;
+  line-height: 1.5rem;
+  font-size: 17px;
 }
 
-nav.li {
-  float: left;
-}
-
-nav.li a {
+.container-sponsors {
+  margin: 0%;
   display: block;
-  padding: 8px;
-  background-color: #dddddd;
+  padding: 10px;
+  width: auto;
 }
 
-bg{
+.copyright_logo {
+  margin: 0%;
+  display: block;
+  background-color: #3b4261;
+  padding: 10px;
+  width: auto;
+}
+
+.row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.bar{
-  width:100%;
-  overflow:hidden;
-  position:static;
-  float:left;
+.team_column {
+  float: left;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-# Everything below this is the meteor function
+.team_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.client_column {
+  float: left;
+  flex: 25%;
+  max-width: 75%;
+  padding: 0 4px;
+}
+
+.client_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.banner {
+  font-size: 45px;
+  font-family: monospace;
+  font-weight: bolder;
+
+  background-size: cover;
+  opacity: .75;
+  background-position: 50% 50%;
+  height: 600px;
+}
+
+.bar {
+  padding-top: 150px;
+}
+
+.team_container {
+  display: block;
+  position: relative;
+  padding: 10px;
+  padding-top: 500px;
+  width: auto;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients_container {
+  display: block;
+  position: relative;
+  padding: 10px;
+  padding-top: 10px;
+  width: auto;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+  display: block;
+}
+
+.overlay {
+  position: relative;
+  bottom: 35px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+###
+#####################################################
+# Everything below this is the meteor functionality #
+#####################################################
+###
+
 .nightsky{
   position: absolute;/* position: relative; */
   width: 100%;
@@ -144,11 +210,11 @@ bg{
   left: calc(50% - 250px);
   background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF0000, rgba(0, 0, 255, .5));
   filter: drop-shadow(0 0 6px #FF0000);
-  animation-delay: 1s;
+  animation-delay: 1.4s;
 }
 
 .star:nth-child(1)::before, .star:nth-child(1)::after{
-  animation-delay: 1s;
+  animation-delay: 1.4s;
 }
 
 .star:nth-child(2){
@@ -167,11 +233,11 @@ bg{
   top: calc(50% - 0px);
   left: calc(50% - 150px);
   filter: drop-shadow(0 0 6px #FFFFFF);
-  animation-delay: 1.4s;
+  animation-delay: 1.0s;
 }
 
 .star:nth-child(3)::before, .star:nth-child(3)::after{
-  animation-delay: 1.4s;
+  animation-delay: 1.0s;
 }
 
 .star:nth-child(4){
@@ -179,11 +245,11 @@ bg{
   left: calc(50% - 200px);
   background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #46eb8e, rgba(0, 0, 255, .5));
   filter: drop-shadow(0 0 6px #46eb8e);
-  animation-delay: 1.6s;
+  animation-delay: 1.2s;
 }
 
 .star:nth-child(4)::before, .star:nth-child(4)::after{
-  animation-delay: 1.6s;
+  animation-delay: 1.2s;
 }
 
 .star:nth-child(5){
@@ -191,9 +257,9 @@ bg{
   left: calc(50% - 250px);
   background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #fff954, rgba(0, 0, 255, .5));
   filter: drop-shadow(0 0 6px #fff954);
-  animation-delay: 1.8s;
+  animation-delay: 1.4s;
 }
 
 .star:nth-child(5)::before, .star:nth-child(5)::after{
-  animation-delay: 1.8s;
+  animation-delay: 1.4s;
 }

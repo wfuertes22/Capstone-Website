@@ -1,112 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>First Light</title>
-    <link rel="stylesheet" href="./indexstyle.css">
-    <script src="script.js"></script>
-</head>
-<body>
-    <h1>Team First Light</h1>
+    <head>
+        <title>First Light</title>
+        <link rel="icon" type="image/x-icon" href="/images/team_logo.jpg">
+        <link rel="stylesheet" href="indexstyle.css">
+        <script src="script.js"></script>
+    </head>
 
-    <img src="./Images/Team_Logo.jpg" width="80" height="80">
+    <body class="body">
 
-    <ul class="nav">
-        <li><a href="./About.html">Team</a></li>
-    </ul>
-    <div class="bar">
-        <button class="bar-item tab-button" onclick="openTab('Team')">Team</button>
-        <button class="bar-item tab-button" onclick="openTab('Description')">Description</button>
-        <button class="bar-item tab-button" onclick="openTab('Requirements')">Requirements</button>
-        <button class="bar-item tab-button" onclick="openTab('Solution')">Envisioned solution</button>
-        <button class="bar-item tab-button" onclick="openTab('Technologies')">Technologies</button>
-        <button class="bar-item tab-button" onclick="openTab('Schedule')">Schedule</button>
-        <button class="bar-item tab-button" onclick="openTab('Codebase')">Codebase</button>
-        <button class="bar-item tab-button" onclick="openTab('Demo')">Demo</button>
+      <div class="banner">
+        <h1 class="banner_image"><em><a href="/index.html">Team First Light</a></em></h1>
+        <div class="bg">
+            <div class="nightsky">
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+            </div>
+        </div>
+
+        <script>
+            function openTab(tabName) {
+              var i;
+              var x = document.getElementsByClassName("tab-head");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              document.getElementById(tabName).style.display = "block";
+            }
+        </script>
       </div>
-      
-      <div id="Description" class="tab-head">
-        <span onclick="this.parentElement.style.display='none'"
-        class="tab-button ">&times;</span>
-        <h2>Description</h2>
-        <p>Our client recieves terabytes of astronomical data each day. Visualizing this data is currently very poor, or even broken. We are building a visualization tool
-            that will make visualizing this data easy and attractive, while being performant and hosted at NAU.</p>
+
+      <div class="bar">
+          <button class="bar-item tab-button" onclick="openTab('Description')">Project Description</button>
+          <button class="bar-item tab-button" onclick="openTab('Solution')">Envisioned solution</button>
+          <button class="bar-item tab-button" onclick="openTab('Documents')">Documents</button>
+          <button class="bar-item tab-button" onclick="openTab('Schedule')">Schedule</button>
       </div>
-      
-      <div id="Requirements" class="tab-head" style="display:none">
+
+      <div id="Documents" class="tab-head" style="display:none">
         <span onclick="this.parentElement.style.display='none'"
         class="tab-button">&times;</span>
-        <h2>Requirements</h2>
-        <p><ul>
-            <li>Hosted on NAU's linux servers</li>
-            <li>Using a Python or R based visualization library</li>
-            <li>Should be interactive</li>
-            <li>Performant for potientally millions of data points</li>
-            </ul>
-            </p>
+        <h2>Documents</h2>
+        <p>Here is a list of our documents:</p>
       </div>
 
-      <div id="Solution" class="tab-head">
-        <span onclick="this.parentElement.style.display='none'"
-        class="tab-button ">&times;</span>
-        <h2>Envisioned Solution</h2>
-        <p>Web based visualization library that connects to NAU's local database.</p>
-      </div>
+      <div class="team_container">
+        <h1>The Team</h1>
+        <div class="row">
+            <div class="team_column">
+                <img src="/images/team/Matt_List.JPG" class="image">
+                <div class="overlay">Matt List <p>Team Lead</p></div>
+            </div>
 
-      <div id="Technologies" class="tab-head">
-        <span onclick="this.parentElement.style.display='none'"
-        class="tab-button ">&times;</span>
-        <h2>Technologies</h2>
-        <p>
-            <ul>
-            <li>Git/GitHub VC and repository host</li>
-            <li>Currently considering Dash, Streamlit, Shiny.</li>
-        </ul>
-        </p>
+            <div class="team_column">
+                <img src="/images/team/Carson_Pociask.JPG" class="image">
+                <div class="overlay">Carson Pociask <p>Recorder</p></div>
+            </div>
 
-        <div id="Schedule" class="tab-head">
-            <span onclick="this.parentElement.style.display='none'"
-            class="tab-button ">&times;</span>
-            <h2>Schedule</h2>
-            <p>Coming Soon</p>
-          </div>
+            <div class="team_column">
+                <img src="/images/team/Jakob_Nelson.JPG" class="image">
+                <div class="overlay">Jakob Nelson<p>Release Manager</p></div>
+            </div>
 
-          <div id="Codebase" class="tab-head">
-            <span onclick="this.parentElement.style.display='none'"
-            class="tab-button ">&times;</span>
-            <h2>Codebase</h2>
-            <p>Coming Soon</p>
-          </div>
+            <div class="team_column">
+                <img src="/images/team/William_Fuertes.JPG" class="image">
+                <div class="overlay">William Fuertes <p>Architect</p></div>
+            </div>
 
-          <div id="Demo" class="tab-head">
-            <span onclick="this.parentElement.style.display='none'"
-            class="tab-button ">&times;</span>
-            <h2>Demo</h2>
-            <p>Coming Soon</p>
-          </div>
-
-      </div>
-
-    <div class="bg">
-        <div class="nightsky">
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
+            <div class="team_column">
+                <img src="/images/team/Jensen_Roe.JPG" class="image">
+                <div class="overlay">Jensen Roe<p>Frontend Manager</p></div>
+            </div>
         </div>
-    </div>
+      </div>
 
-    <script>
-        function openTab(tabName) {
-          var i;
-          var x = document.getElementsByClassName("tab-head");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          document.getElementById(tabName).style.display = "block";  
-        }
-    </script>
+      <div class="clients_container">
+          <h1>Our Clients</h1>
+          <p>Both of the clients that are supporting this project are falculty at Northern Arizona University<br></p>
+          <div class="row">
+              <div class="client_column">
+                  <img src="/images/team/David_Trilling.jpg" alt="Avatar" class="image">
+                  <div>Dr. David Trilling<p>Professor of Astronomy and Planetary Science</p></div>
+              </div>
+              <div class="client_column">
+                  <img src="/images/team/Mike_Gowanlock.jpg" alt="Avatar" class="image">
+                  <div>Dr. Mike Gowanlock<p>Assistant Professor - School of Informatics, Computing<br>and Cyber Systems (<a href="https://nau.edu/school-of-informatics-computing-and-cyber-systems/">SICCS</a>)</p></div>
+              </div>
+          </div>
+      </div>
 
-</body>
+      <div class="copyright_logo">
+        <img src="/images/team_logo.jpg" class="team-logo">
+        <p>Team First Light - CS Capstone 2021/2022</p>
+      </div>
+
+    </body>
 </html>
