@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>First Light</title>
-        <link rel="icon" type="image/x-icon" href="/images/team_logo.jpg">
+        <link rel="icon" type="image/x-icon" href="images/team_logo.jpg">
         <link rel="stylesheet" href="indexstyle.css">
         <script src="script.js"></script>
     </head>
@@ -10,68 +10,139 @@
     <body class="body">
 
       <div class="banner">
-        <h1 class="banner_image"><em><a href="/index.html">Team First Light</a></em></h1>
-        <div class="bg">
-            <div class="nightsky">
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-            </div>
-        </div>
-
-        <script>
-            function openTab(tabName) {
-              var i;
-              var x = document.getElementsByClassName("tab-head");
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-              }
-              document.getElementById(tabName).style.display = "block";
-            }
-        </script>
+        <h1 class="banner_image"><em><a href="index.html">Team First Light</a></em></h1>
       </div>
 
       <div class="bar">
-          <button class="bar-item tab-button" onclick="openTab('Description')">Project Description</button>
-          <button class="bar-item tab-button" onclick="openTab('Solution')">Envisioned solution</button>
-          <button class="bar-item tab-button" onclick="openTab('Documents')">Documents</button>
-          <button class="bar-item tab-button" onclick="openTab('Schedule')">Schedule</button>
+        <button class="bar-item tab-button" onclick="openTab('Description')">Project Description</button>
+        <button class="bar-item tab-button" onclick="openTab('Solution')">Envisioned solution</button>
+        <button class="bar-item tab-button" onclick="openTab('Documents')">Documents</button>
+        <button class="bar-item tab-button" onclick="openTab('Schedule')">Schedule</button>
+      </div>
+      <!--
+              <div class="bg">
+                  <div class="nightsky">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+              </div> -->
+
+              <script>
+                  function openTab(tabName) {
+                    var i;
+                    var x = document.getElementsByClassName("tab-head");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                    }
+                    document.getElementById(tabName).style.display = "block";
+                  }
+              </script>
+
+      <div id="Description" class="tab-head" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="tab-button">&times;</span>
+        <h2>Project Description</h2>
+        <p>Here is a description of the project:</p>
+      </div>
+
+      <div id="Solution" class="tab-head" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="tab-button">&times;</span>
+        <h2>Solution</h2>
+        <p>Our Solution:</p>
       </div>
 
       <div id="Documents" class="tab-head" style="display:none">
         <span onclick="this.parentElement.style.display='none'"
         class="tab-button">&times;</span>
         <h2>Documents</h2>
-        <p>Here is a list of our documents:</p>
+        <p>Documents:</p>
       </div>
+
+      <div id="Schedule" class="tab-head" style="display:none">
+        <span onclick="this.parentElement.style.display='none'"
+        class="tab-button">&times;</span>
+        <h2>Schedule</h2>
+        <p>Schedule:</p>
+      </div>
+
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 2</div>
+        <img src="/images/veracrubin.jpg" style="width:100%">
+        <div class="text">Vera C. Rubin Observatory</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 2</div>
+        <img src="/images/veracrubin2.jpg" style="width:100%">
+        <div class="text">Vera C. Rubin Observatory</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
 
       <div class="team_container">
         <h1>The Team</h1>
         <div class="row">
             <div class="team_column">
-                <img src="/images/team/Matt_List.JPG" class="image">
+                <img src="images/team/Matt_List.JPG" class="image">
                 <div class="overlay">Matt List <p>Team Lead</p></div>
             </div>
 
             <div class="team_column">
-                <img src="/images/team/Carson_Pociask.JPG" class="image">
+                <img src="images/team/Carson_Pociask.JPG" class="image">
                 <div class="overlay">Carson Pociask <p>Recorder</p></div>
             </div>
 
             <div class="team_column">
-                <img src="/images/team/Jakob_Nelson.JPG" class="image">
+                <img src="images/team/Jakob_Nelson.JPG" class="image">
                 <div class="overlay">Jakob Nelson<p>Release Manager</p></div>
             </div>
 
             <div class="team_column">
-                <img src="/images/team/William_Fuertes.JPG" class="image">
+                <img src="images/team/William_Fuertes.JPG" class="image">
                 <div class="overlay">William Fuertes <p>Architect</p></div>
             </div>
 
             <div class="team_column">
-                <img src="/images/team/Jensen_Roe.JPG" class="image">
+                <img src="images/team/Jensen_Roe.JPG" class="image">
                 <div class="overlay">Jensen Roe<p>Frontend Manager</p></div>
             </div>
         </div>
@@ -82,18 +153,18 @@
           <p>Both of the clients that are supporting this project are falculty at Northern Arizona University<br></p>
           <div class="row">
               <div class="client_column">
-                  <img src="/images/team/David_Trilling.jpg" alt="Avatar" class="image">
+                  <img src="images/team/David_Trilling.jpg" alt="Avatar" class="image">
                   <div>Dr. David Trilling<p>Professor of Astronomy and Planetary Science</p></div>
               </div>
               <div class="client_column">
-                  <img src="/images/team/Mike_Gowanlock.jpg" alt="Avatar" class="image">
+                  <img src="images/team/Mike_Gowanlock.jpg" alt="Avatar" class="image">
                   <div>Dr. Mike Gowanlock<p>Assistant Professor - School of Informatics, Computing<br>and Cyber Systems (<a href="https://nau.edu/school-of-informatics-computing-and-cyber-systems/">SICCS</a>)</p></div>
               </div>
           </div>
       </div>
 
       <div class="copyright_logo">
-        <img src="/images/team_logo.jpg" class="team-logo">
+        <img src="images/team_logo.jpg" class="team-logo">
         <p>Team First Light - CS Capstone 2021/2022</p>
       </div>
 
